@@ -1,0 +1,70 @@
+.ul-forulario {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: antiquewhite;
+    padding: 2vh;
+
+    * {
+        /* Fuente */
+        font-family: "Poiret One", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    li {
+        margin: 2vh;
+        padding: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.19rem
+    }
+
+    .form-prioridad {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: row;
+        gap: 0.5vw;
+    }
+
+    .btn-enviar {
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 234, 0, 0.359);
+        text-shadow: 1px 1px 1px black;
+        color: rgba(250, 235, 215, 0.944);
+        border-bottom: 1px;
+        border-radius: 17%;
+        padding: 0.8vh;
+        width: 2rem;
+        height: 1.5rem;
+    }
+
+    .text-area {
+        background-color: whitesmoke;
+        width: 40vh;
+        height: 1vh;
+        padding: 0.60vh;
+        border-radius: 50px;
+
+        /* media queries */
+
+        @media screen and (max-width: 500px) {
+            width: 30vh;
+            height: 0.8vh;
+        }
+
+        @media screen and (max-width: 400px) {
+            width: 20vh;
+            height: 0.5vh;
+        }
+    }
+
+}
