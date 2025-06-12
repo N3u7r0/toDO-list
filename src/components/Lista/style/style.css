@@ -1,115 +1,219 @@
 .tabla {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: center;
     align-items: center;
-    height: 30vh;
     overflow-y: auto;
     overflow-x: hidden;
-    word-wrap: break-word;
+    width: 100%;
+    height: 40vh;
+
     /* fuente */
     font-family: "Agdasima", sans-serif;
     font-weight: 400;
     font-style: normal;
-    --color-tabla: rgba(0, 170, 99, 0.8);
-    
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+
+    /* variable color */
+    --color-tabla: rgba(0, 170, 99, 0.7);
 }
 
 tbody {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    width: 98%;
+    margin: 0.5rem;
     gap: 0.5vh;
-    margin: 2vh;
+
     tr {
         display: flex;
-        flex-wrap: wrap;
-        justify-items: center;
         justify-content: space-between;
-        width: 98%;
         overflow-x: hidden;
 
+        /* para todos los td */
         td {
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border-radius: 2px;
             text-align: center;
-            padding: 0vh 1vw 0vh 1vh;
+            margin: 0vh 0.2vw 0vh 0.2vw;
+            padding: 0vh 0.1vw 0vh 0.1vw;
+            background-color: var(--color-tabla);
+            border: 1px solid rgba(0, 41, 24, 0.4);
+            width: 7.5rem;
         }
 
+        .td-tarea {
+            width: 50vw;
+            overflow: hidden;
+            /* Oculta texto q no entra */
+            text-overflow: ellipsis;
+        }
+
+        .td-prioridad-baja {
+
+            animation: prioridad-baja 8s infinite;
+
+        }
+
+        .td-prioridad-media {
+            animation: prioridad-media 5s infinite;
+
+        }
+
+        .td-prioridad-alta {
+            animation: prioridad-alta 2s infinite;
+
+        }
+
+
+        .td-btn {
+            z-index: 1;
+            width: max-content;
+            background-color: transparent;
+            border: transparent;
+
+            .btn-eliminar {
+                padding-left: 2vw;
+                padding-right: 2vw;
+                color: rgba(0, 0, 0, 0.71);
+                font-size: large;
+                background-color: rgba(240, 0, 0, 0.8);
+                border-radius: 6px;
+            }
+        }
+
+        .td-detalle {
+            opacity: 0;
+            position: fixed;
+            bottom: 8vh;
+            left: -1px;
+            border: transparent;
+            width: 100%;
+            padding: 3vh 0vh 3vh 0vh;
+            color: antiquewhite;
+            box-shadow: 0px 0px 15px 30px black;
+            background-color: rgb(0, 0, 0);
+            transition: 0.1s;
+        }
     }
 
-}
-
-.td-tarea {
-    background-color: var(--color-tabla);
-    width: 60vw;
-}
-
-.td-fecha,
-.td-radio {
-    background-color: var(--color-tabla);
-}
-
-
-.td-btn {
-    z-index: 1;
-
-    .btn-eliminar {
-        min-width: 4vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1px;
-        color: rgba(0, 0, 0, 0.71);
-        font-size: large;
-        background-color: rgba(255, 0, 0, 0.913);
-        border-radius: 3px;
+    /* hover q muestra el detalle de la tarea */
+    tr:hover .td-detalle {
+        opacity: 1;
+        z-index: 1;
+        transition: 0.3s;
     }
-}
 
-
-.td-detalle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    left: -1px;
-    position: fixed;
-    width: 100%;
-    pointer-events: fill;
-
-}
-
-tr:hover .td-detalle {
-    bottom: 8vh;
-    opacity: 1;
-    background-color: rgb(0, 0, 0);
-    color: antiquewhite;
-    transition: 0.2s;
-    box-shadow: 0px 0px 15px 30px black;
-    z-index: 1;
-    padding: 3vh 0vh 3vh 0vh;
 }
 
 /* texto qeu sale cuando no hay nada enla lista */
 .texto-lista-tabla {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 30vh;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
     font-size: xx-large;
     text-align: center;
     background-image: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(100, 0, 0) 10%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 0.5) 70%, rgb(100, 0, 0) 90%, rgb(0, 0, 0) 100%);
-    border: solid 2px black;
     /* fuente */
     font-family: "Agdasima", sans-serif;
     font-weight: 600;
     font-style: normal;
+
+    .spinner {
+        position: relative;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-top: 1vh;
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-top: 5px solid rgba(0, 0, 0, 0.8);
+        border-bottom: 5px solid rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(30deg);
+
+    }
+
+    30% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(1deg);
+    }
+
+    60% {
+        transform: rotate(150deg);
+    }
+
+    90% {
+        transform: rotate(340deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes prioridad-baja {
+    0% {
+        border: solid 1px rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: rgba(0, 180, 0, 0.3);
+        border: solid 1px rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+        border: solid 1px rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+
+    }
+}
+
+@keyframes prioridad-media {
+    0% {
+        background-color: rgba(200, 200, 0, 0.3);
+        border: solid 1px rgba(0, 0, 0, 0.3);
+    }
+
+    50% {
+        background-color: rgb(200, 200, 0, 0.5);
+        border: solid 1px rgba(0, 0, 0, 0.5);
+    }
+
+    100% {
+        background-color: rgba(200, 200, 0, 0.3);
+        border: solid 1px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes prioridad-alta {
+    0% {
+        background-color: rgba(230, 0, 0, 0.4);
+        border: solid 1px rgba(0, 0, 0, 0.2);
+    }
+
+    50% {
+        background-color: rgba(240, 0, 0, 0.6);
+        border: solid 1px rgba(0, 0, 0, 0.8);
+        box-shadow: 0px 0px 30px 2px rgba(230, 0, 0, 0.4);
+    }
+
+    100% {
+        background-color: rgba(230, 0, 0, 0.4);
+        border: solid 1px rgba(0, 0, 0, 0.2);
+    }
 }

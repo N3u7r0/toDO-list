@@ -17,23 +17,26 @@ const Lista = () => {
           {datosArray.map((dato, index) => (
             <tr key={index}>
               <td className="td-tarea"><p>{dato.tarea}</p></td>
-              <td className="td-fecha"><p>Fecha: {dato.fecha}</p></td>
-              <td className="td-radio"><p>Prioridad: {dato.radio}</p></td>
-              <td className="td-detalle"><p>{dato.detalle}</p></td>
+              <td><p>Fecha:{dato.fecha}</p></td>
+              <td className={`td-prioridad-${dato.radio}`}><b>{/* Prioridad: */}{dato.radio}</b></td>
               <td className="td-btn">
                 <button className="btn-eliminar" onClick={() => eliminarTarea(index)}>x</button>
               </td>
-
+              {/* detalle q aparece en negro */}
+              <td className="td-detalle"><p>{dato.detalle}</p></td>
             </tr>
           ))}
         </tbody>
       </table>
     </>
   ) : (
-    <div className="tbody">
+    <>
+      <div className="texto-lista-tabla">
+        <p >No hay tareas pendientes!</p>
+        <div className="spinner"></div>
+      </div>
+    </>
 
-      <p className="texto-lista-tabla">No hay tareas pendientes!</p>
-    </div>
 
   )
 }
