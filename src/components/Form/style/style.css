@@ -38,15 +38,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(255, 234, 0, 0.359);
-        text-shadow: 1px 1px 1px black;
-        color: rgba(250, 235, 215, 0.944);
+        background-color: rgba(188, 240, 0, 0.4);
+        background-image: linear-gradient(to left, rgba(0, 60, 2, 0.5) 10%, transparent 50%);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.507);
+        color: rgba(209, 209, 209, 0.944);
         border-bottom: 1px;
         border-radius: 17%;
         padding: 0.8vh;
-        width: 2rem;
-        height: 1.5rem;
+        width: 2.5rem;
+        height: 1.8rem;
+        font-size: large;
+        transition: 0.1s;
+        margin-top: 0.3rem;
+
+      
     }
+
 
     .text-area {
         background-color: whitesmoke;
@@ -54,7 +61,7 @@
         height: 1vh;
         padding: 0.60vh;
         border-radius: 50px;
-      
+
         /* media queries */
 
         @media screen and (max-width: 500px) {

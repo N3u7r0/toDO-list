@@ -46,8 +46,8 @@ const Form = () => {
                     </div>
                 </li>
                 <li>
-                     <p>Enviar</p>
-                    <button className="btn-enviar" type="submit">✔</button>
+                     <p>Guardar</p>
+                    <button className="btn-enviar" type="submit">⬇</button>
                 </li>
 
             </ul>

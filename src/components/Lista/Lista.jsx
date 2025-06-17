@@ -20,7 +20,7 @@ const Lista = () => {
               <td><p>Fecha:{dato.fecha}</p></td>
               <td className={`td-prioridad-${dato.radio}`}><b>{/* Prioridad: */}{dato.radio}</b></td>
               <td className="td-btn">
-                <button className="btn-eliminar" onClick={() => eliminarTarea(index)}>x</button>
+                <button className="btn-eliminar" onClick={() => eliminarTarea(index)}>✔</button>
               </td>
               {/* detalle q aparece en negro */}
               <td className="td-detalle"><p>{dato.detalle}</p></td>
