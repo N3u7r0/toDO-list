@@ -47,8 +47,20 @@ tbody {
         .td-tarea {
             width: 50vw;
             overflow: hidden;
-            /* Oculta texto q no entra */
+            /*   overflow Oculta texto q no entra y w space evita q salte de linea */
             text-overflow: ellipsis;
+            white-space: nowrap;
+
+            :hover {
+                z-index: 2;
+                left: 0%;
+                color: wheat;
+                background-color: rgba(0, 0, 0,0.95);
+                box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.95);
+
+                width: 100%;
+                position: absolute;
+            }
         }
 
         .td-prioridad-baja {
@@ -113,7 +125,12 @@ tbody {
             color: antiquewhite;
             box-shadow: 0px 0px 15px 30px black;
             background-color: rgb(0, 0, 0);
-            transition: 0.1s;
+            transition: 0.4s;
+
+                /* lo manda al footer */
+            @media screen and (max-width: 500px) {
+               bottom: 1vh;
+            }
         }
     }
 
@@ -136,7 +153,6 @@ tbody {
         box-shadow: none;
         z-index: 1;
     }
-
 
 }
 

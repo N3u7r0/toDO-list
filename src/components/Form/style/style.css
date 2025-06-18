@@ -54,8 +54,8 @@
 
     .text-area {
         background-color: whitesmoke;
-        width: 40vh;
-        height: 1vh;
+        width: 20vw;
+        height: 1rem;
         padding: 0.60vh;
         border-radius: 50px;
 
