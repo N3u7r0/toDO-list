@@ -49,11 +49,8 @@
         height: 1.8rem;
         font-size: large;
         transition: 0.1s;
-        margin-top: 0.3rem;
-
-      
+        margin-top: 0.3rem; 
     }
-
 
     .text-area {
         background-color: whitesmoke;
@@ -63,12 +60,10 @@
         border-radius: 50px;
 
         /* media queries */
-
         @media screen and (max-width: 500px) {
             width: 30vh;
             height: 0.8vh;
         }
-
         @media screen and (max-width: 400px) {
             width: 20vh;
             height: 0.5vh;

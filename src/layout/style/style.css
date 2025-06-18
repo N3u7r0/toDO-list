@@ -26,17 +26,14 @@
     box-shadow: -10px 20px 35px 12px rgba(0, 0, 0, 0.8);
 
     /* media queries */
-
     @media screen and (max-width: 800px) {
         margin: 0vh 1vh 0vh 1vh;
         top: 2vh;
-        font-size: large;
     }
-
     @media screen and (max-width: 500px) {
         margin: 0vh 1vh 0vh 1vh;
         top: 2vh;
-        font-size: small;
+        font-size: large;
     }
 
     /* escrolbar */
@@ -52,11 +49,9 @@
     /* todo el escrolbar */
     ::-webkit-scrollbar {
         width: 1.5vw;
-
         /* borde de escrolbar negro transparente */
         box-shadow: -10px 0px 100px 1px;
     }
-
 }
 
 h1 {
@@ -67,7 +62,6 @@ h1 {
     text-shadow: -5px 29px 5px rgba(4, 0, 0, 0.7);
     z-index: 0;
     animation: sombra-h1 5s 3;
-
     /* Fuente */
     font-family: "Poiret One", sans-serif;
     font-weight: 400;
@@ -80,23 +74,18 @@ h1 {
     0% {
         text-shadow: -5px 29px 5px rgba(0, 0, 0, 0.2);
     }
-
     20% {
         text-shadow: -30px 23px 8px rgba(0, 0, 0, 0.8);
     }
-
     40% {
         text-shadow: -25px 24px 6px rgba(0, 0, 0, 0.7);
     }
-
     60% {
         text-shadow: -35px 20px 5px rgba(0, 0, 0, 0.9);
     }
-
     80% {
         text-shadow: -25px 30px 5px rgba(0, 0, 0, 0.8);
     }
-
     100% {
         text-shadow: -5px 29px 5px rgba(0, 0, 0, 0.2);
     }

@@ -7,16 +7,13 @@ const Layout = () => {
 
 
   return (
-
     <>
       <DataProvider>
-     
-          <h1>To-Do List ✓</h1>
-          <div className="layout">
-            <Form />
-            <Lista />
-          </div>
-        
+        <h1>To-Do List ✓</h1>
+        <div className="layout">
+          <Form />
+          <Lista />
+        </div>
       </DataProvider>
     </>
   )
