@@ -1,0 +1,22 @@
+.botonera {
+   /*  position: absolute; */
+   width: 100%;
+   bottom: 0;
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   flex-direction: row;
+   background-color: rgba(0, 0, 0, 0.95);
+   box-shadow: 0px 0px 10px 7px;
+
+    p{
+      color: rgba(250, 235, 215, 0.836);
+      font-size: small;
+    }
+   button {
+      margin: 0.3rem;
+      padding: 0.3rem;
+      border-radius: 100%;
+   }
+   
+}
